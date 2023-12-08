@@ -15,9 +15,7 @@ class MainActivity : FragmentActivity(R.layout.main_activity) {
 
         flutterFragment = FlutterFragment.withNewEngine()
             .build()
-        if (flutterFragment != null) {
-            supportFragmentManager.beginTransaction().replace(R.id.content_frame, flutterFragment!!).commit()
-        }
+        supportFragmentManager.beginTransaction().replace(R.id.content_frame, flutterFragment!!).commit()
     }
 
     override fun onPostResume() {
